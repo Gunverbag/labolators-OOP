@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D6E6F2;
+}
+.toolbar {
+    margin-bottom: 10px;
+}
+.editor {
+    width: 98%;
+    height: 400px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #F7FBFC;
+    border-radius: 8px;
+}
+.editor p {
+    margin: 0; /* Убираем отступы для абзацев */
+}
+mark {
+    background-color: yellow; /* Цвет выделения */
+}
+.bold {
+    height: 20px;
+}
+.italic{
+    width: 20px;
+}
+select{
+    height: 30px;
+}
+.left, .center, .right{
+    width: 20px;
+}
+.back, .reset{
+    width: 20px;
+}
+.open, .download{
+    width: 30px;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+input{
+    height: 20px;
+}
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #F7FBFC;
+}
+.tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tab-container {
+    display: flex;
+}
+
+.tab {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f7f7f7;
+    margin-right: 5px;
+    border-radius: 8px;
+}
+
+.tab:hover {
+    background-color: #e0e0e0;
+}
+
+.editor-container {
+    width: 98%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #F7FBFC;
+    border-radius: 8px;
+    overflow-y: auto;
+    height: 425px;
+}
+.tab.active {
+    background-color: #ccc; /* Цвет активной вкладки */
+}

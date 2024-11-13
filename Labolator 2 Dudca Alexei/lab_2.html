@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текстовый редактор</title>
+    <link rel="stylesheet" href="lab_2.css">
+</head>
+<body>
+
+<div class="toolbar">
+    <button onclick="editor.setBold()"><img class="bold" src="svg/bold-svgrepo-com.svg" alt=""></button>
+    <button onclick="editor.setItalic()"><img src="svg/italic-svgrepo-com.svg" alt="" class="italic"></button>
+    <select id="fontSizeSelector" onchange="editor.setFontSize(this.value)">
+        <option value="12">12px</option>
+        <option value="14">14px</option>
+        <option value="16">16px</option>
+        <option value="18">18px</option>
+        <option value="20">20px</option>
+        <option value="24">24px</option>
+        <option value="28">28px</option>
+        <option value="32">32px</option>
+    </select>
+    <select id="fontStyleSelector" onchange="editor.setFontStyle(this.value)">
+        <option value="">Обычный</option>
+        <option value="Arial">Arial</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+    </select>
+    <input type="color" id="colorPicker" onchange="editor.setTextColor(this.value)">
+    <!-- группа выравнивания -->
+    <button onclick="editor.alignLeft()"><img src="svg/align-left-svgrepo-com.svg" alt="" class="left"></button>
+    <button onclick="editor.alignCenter()"><img src="svg/align-center-svgrepo-com.svg" alt="" class="center"></button>
+    <button onclick="editor.alignRight()"><img src="svg/align-right-svgrepo-com.svg" alt="" class="right"></button>
+    <!-- назат вернуть -->
+    <button onclick="editor.undo()"><img src="svg/arrow-left-svgrepo-com.svg" alt="" class="back"></button>
+    <button onclick="editor.redo()"><img src="svg/arrow-right-svgrepo-com.svg" alt="" class="reset"></button>
+    <button onclick="editor.openFile()"><img src="svg/file-edit-svgrepo-com.svg" alt="" class="open"></button>
+    <button onclick="editor.saveFile()"><img src="svg/download-square-svgrepo-com.svg" alt="" class="download"></button>
+    <!-- поиск и замена -->
+    <input type="text" id="searchInput" placeholder="Поиск слова">
+    <button onclick="editor.searchWord()">Поиск</button>
+    <input type="text" id="replaceInput" placeholder="Заменить на...">
+    <button onclick="editor.replaceWord()">Заменить</button>
+</div>
+
+<div class="tabs">
+    <div id="tabContainer" class="tab-container">
+        <!-- Вкладки будут динамически добавляться сюда -->
+    </div>
+    <button onclick="editor.addTab()">Добавить вкладку</button>
+</div>
+
+<div id="editorContainer" class="editor-container">
+    <!-- Здесь будет отображаться содержимое активной вкладки -->
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/build/index.js"></script><!-- бибиотека для создания в docx -->
+<script src="https://unpkg.com/docx@7.1.0/build/index.js"></script><!-- бибиотека для создания в docx 2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script><!-- бибиотека для открытия docx  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script><!-- бибиотека для сохранения файла -->
+
+<script src="lab_2.js"></script>
+</body>
+</html>

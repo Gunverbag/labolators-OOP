@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Графический редактор</title>
+    <link rel="stylesheet" href="lab9.css">
+    <script src="https://cdn.jsdelivr.net/npm/psd.js/dist/psd.js"></script>
+</head>
+<body>
+
+    <div id="toolbar">
+        <button id="brush-tool">Кисть</button>
+        <button id="eraser-tool">Ластик</button>
+        <button id="fill-tool">Заливка</button>
+        <button id="rectangle-tool">Прямоугольник</button>
+        <button id="ellipse-tool">Эллипс</button>
+        <button id="bezier-tool">Кривая Безье</button>
+        <button id="clear-canvas">Очистить</button>
+        <button id="save-image">Сохранить</button>
+        <input type="file" id="file-input" accept="image/*" />
+        <label for="brush-size">Размер кисти:</label>
+        <input type="number" id="brush-size" value="5" min="1" max="100" />
+    </div>
+    
+
+<div id="color-picker">
+    <input type="color" id="draw-color" value="#000000" />
+    <input type="color" id="bg-color" value="#FFFFFF" />
+</div>
+
+<canvas id="canvas" width="1200" height="650"></canvas>
+
+
+<script src="lab9.js"></script>
+
+</body>
+</html>
